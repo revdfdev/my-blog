@@ -2,25 +2,35 @@
  * @Author: webcubic3
  * @Date:   2019-01-10T16:08:11+05:30
  * @Last modified by:   webcubic3
- * @Last modified time: 2019-01-11T17:04:44+05:30
+ * @Last modified time: 2019-01-11T18:46:08+05:30
  */
 
 import React, {Component} from 'react';
 import Header from '../components/shared/Header'
 import BaseLayout from '../components/layouts/BaseLayout'
 import SuperCoponent from '../components/SuperComponent'
+import axios from 'axios';
 
 class Index extends SuperCoponent {
 
+	static async getInitialProps() {
+		console.log("I am initial props")
+		let userdata;
+		try {
+			const response = await axios.get('https://jsonplaceholder.typicode.com/todos/1')
+			userdata = response.data
+		}catch(err) {
+			console.log(err)
+		}
+		return {initialData: [1,2,3,4], userdata}
+	}
+
 	constructor(props) {
-		debugger
 		super(props)
-		debugger
 		this.state = {
 			title: 'I am index page'
 		}
 		this.changeTitle = this.changeTitle.bind(this)
-		debugger
 		console.log("constructor")
 	}
 
@@ -32,7 +42,6 @@ class Index extends SuperCoponent {
 
 	componentDidMount() {
 		console.log("Component did mount")
-		debugger
 	}
 
 	componentDidUpdate() {
@@ -46,10 +55,11 @@ class Index extends SuperCoponent {
 
 	render() {
 		console.log("Render")
+		const {initialData, userdata} = this.props
 		return (
 				<BaseLayout>
 						<h1>Hi, I am index page</h1>
-						<h2>{this.state.title}</h2>
+						<h2>{userdata.title}</h2>
 						<button onClick={this.changeTitle}>Change Title</button>
 				</BaseLayout>
 		)
