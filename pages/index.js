@@ -1,8 +1,8 @@
 /**
  * @Author: webcubic3
  * @Date:   2019-01-10T16:08:11+05:30
- * @Last modified by:   webcubic3
- * @Last modified time: 2019-01-11T18:46:08+05:30
+ * @Last modified by:   rehank
+ * @Last modified time: 2019-01-12T03:06:36+05:30
  */
 
 import React, {Component} from 'react';
@@ -69,8 +69,3 @@ class Index extends SuperCoponent {
 
 
 export default Index
-
-
-// <Header title={"Hello this is a header"}>
-// 	<h1>I am header subtitle</h1>
-// </Header>
