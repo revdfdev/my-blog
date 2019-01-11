@@ -1,13 +1,14 @@
  /**
  * @Author: webcubic3
  * @Date:   2019-01-10T16:14:43+05:30
- * @Last modified by:   rehank
- * @Last modified time: 2019-01-11T02:50:48+05:30
+ * @Last modified by:   webcubic3
+ * @Last modified time: 2019-01-11T16:04:42+05:30
  */
 
 
 import React, { Component } from 'react';
 import Link from 'next/link'
+import '../../styles/main.scss'
 
 
 /**
@@ -21,9 +22,10 @@ export class Header extends Component { // eslint-disable-line react/prefer-stat
       <>
       <a>{title}</a>
       {children}
-      <p class='customClass'>I am a styled p elemnts</p>
+
+      <p className="customClassFromFile">I am a P tag</p>
       <Link href="/">
-        <a>Home</a>
+        <a style={{fontSize: '20px'}}>Home</a>
       </Link>
       <Link href="/blogs">
         <a>Blog</a>
@@ -37,14 +39,16 @@ export class Header extends Component { // eslint-disable-line react/prefer-stat
       <Link href="/about">
         <a>About</a>
       </Link>
-      <style jsx> {
+      <style jsx global> {
         `a {
-            font-size: 18px;
+            font-size: 14px;
             margin: 5px 5px;
+            colors: 'amber'
           };
-          .customClass {
-            color: red;
-          }`
+          .xyz {
+            color: green;
+          };
+          `
       }
       </style>
       </>
