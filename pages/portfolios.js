@@ -1,8 +1,8 @@
 /**
  * @Author: webcubic3
  * @Date:   2019-01-10T14:51:33+05:30
- * @Last modified by:   rehank
- * @Last modified time: 2019-01-12T03:13:36+05:30
+ * @Last modified by:   webcubic3
+ * @Last modified time: 2019-01-12T15:18:02+05:30
  */
 
 
@@ -10,6 +10,7 @@
 import React, { Component } from 'react';
 import BaseLayout from '../components/layouts/BaseLayout'
 import axios from 'axios'
+import Link from 'next/link'
 
 export default class Portfolios extends Component {
 
@@ -22,17 +23,27 @@ export default class Portfolios extends Component {
 			console.error(err)
 		}
 
-		return {posts}
+		return {posts: posts.splice(0, 10)}
+	}
+
+	renderPosts (posts) {
+		return posts.map(post => <li key={post.id}>
+				<div key={post.id}>
+					<Link as={`/portfolio/${post.id}`} href={`/portfolio?title=${post.title}`}>
+						<a style={{fontSize: '20px'}}>{post.title}</a>
+					</Link>
+					</div>
+		</li>)
 	}
 
 	render() {
-		debugger;
 		const { posts } = this.props;
-		console.log(posts)
-		debugger
 		return (
 			<BaseLayout>
 				<h1>I am Portfolios page</h1>
+				<ul>
+					{this.renderPosts(posts)}
+				</ul>
 			</BaseLayout>
 		);
 	}
