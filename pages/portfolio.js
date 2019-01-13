@@ -21,7 +21,7 @@ class Portfolio extends Component {
     return (
       <div>
         <h1>I am a portfolio page</h1>
-        <h2>{router.query.title}</h2>
+        <h2>{router.query.id}</h2>
       </div>
     );
   }

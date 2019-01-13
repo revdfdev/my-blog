@@ -2,7 +2,7 @@
  * @Author: webcubic3
  * @Date:   2019-01-12T15:47:33+05:30
  * @Last modified by:   webcubic3
- * @Last modified time: 2019-01-12T16:13:07+05:30
+ * @Last modified time: 2019-01-13T14:13:15+05:30
  */
  const express = require('express')
  const next = require('next')
@@ -16,8 +16,8 @@
    const server = express()
 
    server.get('/portfolio/:id', (req, res) => {
-    const actualPage = '/post'
-    const queryParams = { title: req.params.id }
+    const actualPage = '/portfolio'
+    const queryParams = { id: req.params.id }
     app.render(req, res, actualPage, queryParams)
    })
 
