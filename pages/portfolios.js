@@ -8,7 +8,7 @@
 import React, { Component } from "react";
 import BaseLayout from "../components/layouts/BaseLayout";
 import axios from "axios";
-import {Link} from "../routes";
+import { Link } from "../routes";
 
 export default class Portfolios extends Component {
   static async getInitialProps() {

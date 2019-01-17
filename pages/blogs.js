@@ -5,17 +5,15 @@
  * @Last modified time: 2019-01-10T17:29:08+05:30
  */
 
-
-
-import React, { Component } from 'react';
-import BaseLayout from '../components/layouts/BaseLayout'
+import React, { Component } from "react";
+import BaseLayout from "../components/layouts/BaseLayout";
 
 export default class Blogs extends Component {
-	render() {
-		return (
-			<BaseLayout>
-				<h1>I am Blogs page</h1>
-			</BaseLayout>
-		);
-	}
+  render() {
+    return (
+      <BaseLayout>
+        <h1>I am Blogs page</h1>
+      </BaseLayout>
+    );
+  }
 }

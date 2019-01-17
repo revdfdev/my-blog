@@ -3,6 +3,13 @@
 // @Last modified by:   webcubic3
 // @Last modified time: 2019-01-11T16:08:33+05:30
 
+@import "./shared/fonts";
+
+html,
+body {
+  font-family: "Montserrat", "Helvetica";
+}
+
 .customClassFromFile {
   color: teal;
 }

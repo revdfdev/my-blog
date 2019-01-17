@@ -4,16 +4,16 @@
  * @Last modified by:   webcubic3
  * @Last modified time: 2019-01-11T15:18:41+05:30
  */
-import React, { Component } from 'react';
+import React, { Component } from "react";
 
-import BaseLayout from '../components/layouts/BaseLayout'
+import BaseLayout from "../components/layouts/BaseLayout";
 
 export default class About extends Component {
-	render() {
-		return (
-			<BaseLayout>
-				<h1>I am about page</h1>
-			</BaseLayout>
-		);
-	}
+  render() {
+    return (
+      <BaseLayout>
+        <h1>I am about page</h1>
+      </BaseLayout>
+    );
+  }
 }

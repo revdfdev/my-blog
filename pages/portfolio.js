@@ -38,12 +38,12 @@ class Portfolio extends Component {
     return (
       <div>
         <h1>I am a portfolio page</h1>
-        {this.props.postData  &&
-          <> 
+        {this.props.postData && (
+          <>
             <h2>{this.props.postData.title}</h2>
             <p>{this.props.postData.body}</p>
           </>
-        }
+        )}
       </div>
     );
   }
